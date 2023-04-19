@@ -75,11 +75,11 @@
                 // mo 2, rise
                 raise_layer {
                         bindings = <
-   &none    &none    &none    &none    &none    &none             &none    &none     &none    &none    &none    &none
-   &none    &none    &none    &none    &none    &none             &kp KP_PLUS    &kp LPAR     &kp RPAR    &none    &none    &none
-   &none    &none    &none    &none    &none    &none             &kp KP_MINUS    &kp LBRC     &kp RBRC    &none    &none    &none
-   &none    &none    &none    &none    &none    &none             &kp EQUAL    &kp LBKT     &kp RBKT    &none    &none    &none
-   &none    &none    &none    &none    &none    &none             &none    &none     &none    &none    &none    &none
+   &none    &none    &none    &none    &none    &none             &none        &none            &none       &none    &none    &none
+   &none    &none    &none    &none    &none    &none             &kp KP_PLUS  &kp LPAR         &kp RPAR    &none    &none    &none
+   &none    &none    &none    &none    &none    &none             &kp KP_MINUS &kp LEFT_BRACE   &kp RIGHT_BRACE    &none    &none    &none
+   &none    &none    &none    &none    &none    &none             &kp EQUAL    &kp LEFT_BRACKET &kp RIGHT_BRACKET    &none    &none    &none
+   &none    &none    &none    &none    &none    &none             &none        &none            &none       &none    &none    &none
                         >;
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
