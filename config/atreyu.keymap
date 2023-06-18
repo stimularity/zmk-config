@@ -44,6 +44,7 @@
    macros {
         ffback: ffback {
             compatible = "zmk,behavior-macro";
+            label = "ffback";
             #binding-cells = <0>;
             bindings =
                <&macro_press &kp LCTRL>,
