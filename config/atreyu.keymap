@@ -15,9 +15,6 @@
 
 / {
    behaviors {
-
-
-
       ctrl_tab: ctrl_tab {
       compatible = "zmk,behavior-mod-morph";
       label = "GUI_CTRL_TAB";
@@ -42,14 +39,19 @@
           mods = <(MOD_LGUI)>;
         keep-mods = <(MOD_LGUI)>;
       };
-
-      ffback: firefox_back {
-         compatible = "zmk,behavior-mod-morph";
-         label = "NEXTPAGE";
-         #binding-cells = <0>;
-         bindings = <&kp LCTRL>, <&kp LEFT_BRACKET>;
-      };
    };
+
+   macros {
+        ffback: ffback {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+               <&macro_press &kp LCTRL>,
+               <&macro_tap &kp LEFT_BRACKET>,
+               <&macro_release &kp LCTRL>
+            ;
+        };
+    };
 
         keymap {
                 compatible = "zmk,keymap";
