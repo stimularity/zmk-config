@@ -69,7 +69,7 @@
             #binding-cells = <0>;
             bindings =
                <&macro_press &kp LCTRL>,
-               <&macro_press &kp LSHFT>
+               <&macro_press &kp LSHFT>,
                <&macro_tap &kp GRAVE>,
                <&macro_release &kp LCTRL>,
                <&macro_release &kp LSHFT>
