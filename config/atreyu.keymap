@@ -66,6 +66,7 @@
         showterm: showterm {
             compatible = "zmk,behavior-macro";
             label = "showterm";
+            #binding-cells = <0>;
             bindings =
                <&macro_press &kp LCTRL>,
                <&macro_press &kp LSHFT>,
@@ -77,6 +78,7 @@
         volup: volup {
             compatible = "zmk,behavior-macro";
             label = "Volume Up";
+            #binding-cells = <0>;
             bindings =
                <&macro_tap &kp C_VOL_UP>,
                <&macro_tap &kp K_VOL_UP>
@@ -85,6 +87,7 @@
         voldn: voldn {
             compatible = "zmk,behavior-macro";
             label = "Volume Down";
+            #binding-cells = <0>;
             bindings =
                <&macro_tap &kp C_VOL_DN>,
                <&macro_tap &kp K_VOL_DN>
@@ -101,7 +104,7 @@
    &kp TAB   &kp SQT  &kp COMMA &kp DOT  &kp P   &kp Y     &kp F  &kp G   &kp C     &kp R   &kp L    &kp SLASH
    &kp LSHFT &kp A    &kp O    &kp E    &kp U   &kp I     &kp D  &kp H     &kp T     &kp N   &kp S    &kp MINUS
    &kp LCTRL &kp SEMI &kp Q   &kp J    &kp K   &kp X     &kp B  &kp M     &kp W     &kp V   &kp Z    &kp BSLH
-   &none   &kp LALT   &kp LGUI  &mo RAISE   &kp RET &kp LEFT_BRACKET &kp RIGHT_BRACKET  &kp SPACE &mo LOW  &kp EQUAL  &kp GRAVE   &kp RCTRL
+   &none   &kp LALT   &kp LGUI  &mo RAISE   &mt RAISE RET &kp LEFT_BRACKET &kp RIGHT_BRACKET  &mt LOW SPACE &mo LOW  &kp EQUAL  &kp GRAVE   &kp RCTRL
                         >;
          sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
