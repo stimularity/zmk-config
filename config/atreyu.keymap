@@ -93,6 +93,55 @@
                <&macro_tap &kp K_VOL_DN>
             ;
         };
+        // control shift direction macros for workspace navigation
+        macroup: macroup {
+            compatible = "zmk,behavior-macro";
+            label = "macroup";
+            #binding-cells = <0>;
+            bindings =
+               <&macro_press &kp LCTRL>,
+               <&macro_press &kp LSHFT>,
+               <&macro_tap &kp UP>,
+               <&macro_release &kp LCTRL>,
+               <&macro_release &kp LSHFT>
+            ;
+        };
+        macrodown: macrodown {
+            compatible = "zmk,behavior-macro";
+            label = "macrodown";
+            #binding-cells = <0>;
+            bindings =
+               <&macro_press &kp LCTRL>,
+               <&macro_press &kp LSHFT>,
+               <&macro_tap &kp DOWN>,
+               <&macro_release &kp LCTRL>,
+               <&macro_release &kp LSHFT>
+            ;
+        };
+        macroleft: macroleft {
+            compatible = "zmk,behavior-macro";
+            label = "macroleft";
+            #binding-cells = <0>;
+            bindings =
+               <&macro_press &kp LCTRL>,
+               <&macro_press &kp LSHFT>,
+               <&macro_tap &kp LEFT>,
+               <&macro_release &kp LCTRL>,
+               <&macro_release &kp LSHFT>
+            ;
+        };
+        macroright: macroright {
+            compatible = "zmk,behavior-macro";
+            label = "macroright";
+            #binding-cells = <0>;
+            bindings =
+               <&macro_press &kp LCTRL>,
+               <&macro_press &kp LSHFT>,
+               <&macro_tap &kp RIGHT>,
+               <&macro_release &kp LCTRL>,
+               <&macro_release &kp LSHFT>
+            ;
+        };
     };
 
         keymap {
@@ -125,8 +174,8 @@
                 lower_layer {
                         bindings = <
    &tog QWERT &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none     &none    &none    &kp C_PREV &kp C_PLAY_PAUSE  &kp C_NEXT    &kp DEL
-   &kp TAB    &none    &mt LCTRL UP    &none    &none    &none             &ffback     &kp UP    &ffforward    &kp K_SCROLL_UP    &none    &volup
-   &kp LSHFT &mt LCTRL LEFT &mt LCTRL DOWN &mt LCTRL RIGHT &none &none             &kp LEFT  &kp DOWN  &kp RIGHT    &kp K_SCROLL_DOWN    &none    &voldn
+   &kp TAB    &none    &macroup    &none    &none    &none             &ffback     &kp UP    &ffforward    &kp K_SCROLL_UP    &none    &volup
+   &kp LSHFT &macroleft &macrodown &macroright &none &none             &kp LEFT  &kp DOWN  &kp RIGHT    &kp K_SCROLL_DOWN    &none    &voldn
    &kp LCTRL    &none    &none    &none    &none    &none             &kp K_BACK    &none     &kp K_FORWARD    &none    &none    &kp K_MUTE
    &bt BT_CLR    &none    &none    &none    &none    &none             &none    &none     &none    &none    &none    &none
                         >;
